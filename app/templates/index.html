@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Forum Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+
+    <header>
+        <h1>One Million Forum</h1>
+    </header>
+
+
+        <main>
+            <div id="wrapper">
+                <div id="first" class="vertical-menu">
+                  <a href="/index" class="active">Home</a>
+                  <a href="#">Show your Posts</a>
+                  <a href="#">Show All Members</a>
+                  <a href="#">Top Ten Members</a>
+                </div>
+                <div id="second">
+                    <br />
+                    <span><label id="user_name_lb"  title="Kreem" ><b>Kareem Yousef</b></label></span>
+                    <span id="middle_margin" ><button id="setting_btn" title="..." >...</button>
+                    <input type="text" id="name_txt"  name="text_field" placeholder="Enter Member Name.." /></span>
+                    <span id="right_margin" ><a href="/topic/add">+ Add new post</a></span>
+                </div>
+                    <br/>
+                  <div id="third">
+                    <ul id="font">
+                      {% for post in posts %}
+                      <li><a href="#">
+                        {{post.address}}
+                      </a></li>
+                      {% endfor %}
+                    </ul>
+                </div>
+          </div>
+        </main>
+
+
+
+    <footer>
+
+    </footer>
+</body>
+</html>
