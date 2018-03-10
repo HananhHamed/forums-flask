@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>Forum Project</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../static/style.css" />
 </head>
 <body>
-
+<div id="wrapper"><br><br><br>
 <form action="{{ url_for('topic_add') }}" method="post">
-    <table>
-        <td><tr>
+    <div id="fifth">
+    <table id="tabl">
+        <tr><td>
             <label id="addres_lbl"  title="message" ><b>Post Title: </b></label>
+        </td>
+            <td>
              <input type="text" name="title" />
         </td></tr>
         <tr><td>
               <label id="message_lbl"  title="message" ><b>Post Content: </b></label>
-            <input type="text" name="content"/><br/>
+        </td><td>
+            <textarea name="content" ></textarea>
         </td></tr>
         <tr><td>
             <input type="submit" value="Add New Post"/>
-        </td></tr>
-
+        </td>
+        <td><a href="/index" >Home</a></td>
+        </tr>
     </table>
-</form>
 
+</form>
+</div>
 </body>
 </html>

@@ -15,3 +15,20 @@ def topic_add():
     else:
         return render_template("topic_add.html")
 
+@app.route("/topic/show/<post>", methods = ["GET", "POST"])
+def topic_show():
+    if request.method == "POST":
+        return render_template("topic_show.html", post)
+
+@app.route("/topic/update", methods = ["GET", "POST"])
+def topic_update():
+    if request.method == "POST":
+        new_post = models.Post(request.form["title"], request.form["content"])
+        post_store.update(new_post)
+        return redirect(url_for("home"))
+
+@app.route("/topic/delete/<id>")
+def topic_delete(id):
+    post_store.delete(id)
+    return redirect(url_for("home"))
+

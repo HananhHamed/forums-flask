@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Forum Project</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+<div id="wrapper"><br><br><br>
+<form action="{{ url_for('topic_update') }}" method="post">
+    <div id="fifth">
+        <table id="tabl">
+            <tr><td>
+                <label id="addres_lbl"  title="message" ><b>Post Title: </b></label>
+            </td>
+                <td>
+                 <input type="text" name="title" ><b>{post.address} </b></input>
+            </td></tr>
+            <tr><td>
+                  <label id="message_lbl"  title="message" ><b>Post Content: </b></label>
+            </td><td>
+                <textarea name="content" ><b>{post.message} </b></textarea>
+            </td></tr>
+            <tr><td>
+                <input type="submit" value="Update Post"/>
+            </td>
+            <td><a href="/index" >Home</a></td>
+            </tr>
+        </table>
+    </div>
+</form>
+</div>
+</body>
+</html>

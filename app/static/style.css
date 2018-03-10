@@ -26,6 +26,19 @@
     height: 70%;
     background: #E0F2F7;
 }
+#fourth{
+    float:left;
+    width: 100%;
+    height: 40%;
+}
+#fifth{
+    float:none;
+    width: 100%;
+    height: 40%;
+    margin-right:30px
+    margin-left:30px
+}
+
 #left_margin {
   float:left;
   margin-top:0px;
@@ -47,6 +60,9 @@
   margin-left:40px;
   margin-bottom:10px;
 }
+
+
+
 .vertical-menu {
     width: 10px; /* Set a width if you like */
 }
@@ -67,8 +83,12 @@
     background-color: #F4FA58; /* Add a green color to the "active/current" link */
     color: blue;
 }
-#tabl{
-    border: 1px solid #ddd;
-    background-color: #f2f2f2;
 
-}
+
+
+#tabl{
+    background: #E0F2F7;
+    margin-left:300px;
+    width:40%
+ }
+

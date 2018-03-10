@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>Forum Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <link rel="stylesheet" href="../static/style.css" />
 </head>
@@ -32,9 +31,9 @@
                     <br/>
                   <div id="third">
                     <ul id="font">
-                      {% for post in posts %}
-                      <li><a href="#">
-                        {{post.address}}
+                      {% for p in posts %}
+                      <li><a href="{{ url_for('topic_show', post = p) }}">
+                        {{p.address}}
                       </a></li>
                       {% endfor %}
                     </ul>

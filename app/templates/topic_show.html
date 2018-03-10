@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Forum Project</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+<div id="wrapper"><br><br><br>
+<form method="post">
+    <div id="fifth">
+    <table id="tabl">
+        <tr><td>
+            <label id="addres_lbl"  title="message" ><b>{post.address} </b></label>
+        </td>
+           </tr>
+        <tr><td>
+              <label id="message_lbl"  title="message" ><b>{post.message} </b></label>
+        </td></tr>
+        <tr><td>
+            <a href="{{ url_for('topic_update', post = post) }}" >Update</a>
+            <a href="{{ url_for('topic_delete', id = post.id) }}" >Delete</a>
+            <a href="/index" >Home</a>
+        </td></tr>
+    </table>
+
+</form>
+</div>
+</body>
+</html>
